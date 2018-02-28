@@ -20,12 +20,9 @@ function ColorLuminance(hex, lum) {
 }
 
 function previewColor(color){
-  color = color.toString();
-  console.log(color)
-  var borderString = `10px solid ${{color}}`;
-  console.log(borderString);
+  var colorString = `#${color}`;
   
-  $('#hex-value').css('border-right', borderString)
+  $("#color-preview").animate({ backgroundColor: colorString }, 200);
 }
 
 function extendHex(hex){
@@ -42,7 +39,7 @@ $(document).ready(function() {
     var baseLength = baseValue.length;
 
     console.log(baseValue);
-    console.log(baseLength);
+    console.log(baseLength);    
 
     // # in kleurcode wordt weggehaald
     if (baseValue.indexOf("#") !== -1) {

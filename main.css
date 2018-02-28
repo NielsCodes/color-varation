@@ -12,9 +12,41 @@ html, body {
 #page-container main {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   height: 100vh;
   width: 500px;
   background: #fff;
   padding: 20px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#page-container main #input-container {
+  display: flex;
+}
+
+#page-container main #input-container input {
+  height: 25px;
+  margin: 0;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+#page-container main #input-container #color-preview {
+  background: pink;
+  height: 25px;
+  width: 25px;
+  margin-left: 10px;
+}
+
+#page-container section {
+  display: grid;
+  max-height: 100vh;
+  flex: 1;
+  grid-template-rows: repeat(21, 1fr);
+}
+
+#page-container section .color {
+  background: pink;
+  border: 1px solid red;
+  box-sizing: border-box;
 }
